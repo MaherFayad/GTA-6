@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import Hero from './Sections/Hero'
