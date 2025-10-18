@@ -96,6 +96,11 @@ main {
       @apply size-full object-cover md:[object-position:50%_center] [object-position:75%_center];
     }
   }
+  .lucia {
+    .second-vd {
+      @apply size-full object-cover md:[object-position:50%_center] [object-position:15%_center];
+    }
+  }
   .entrance-message {
     @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
 
