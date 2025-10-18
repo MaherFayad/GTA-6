@@ -19,7 +19,7 @@ const CommingSoon = () => {
                     className="md:w-32 w-20" 
                 />
                 <img 
-                    src="/images/x.svg" 
+                    src="/images/x-logo.svg" 
                     alt="scroll down" 
                     className="md:w-52 w-40" 
                 />
