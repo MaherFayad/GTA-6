@@ -181,16 +181,6 @@ main {
       }
     }
   }
-  .lucia-content {
-    @apply flex justify-center items-center;
-
-    h1 {
-      @apply relative font-round-bold md:text-9xl text-6xl md:leading-28;
-    }
-    h2 {
-      @apply relative font-round-bold md:text-4xl text-xl max-w-md lg:mt-0 mt-10;
-    }
-  }
   .post-card {
     @apply relative flex justify-center items-center pb-80 shadow-2xl;
 
@@ -246,19 +236,6 @@ main {
   mask-size: 100% 100%;
 }
 
-.lucia-content h1,
-.lucia-content h2 {
-  background-image: radial-gradient(
-    at 80% 40%,
-    rgb(252, 82, 67) 0%,
-    rgb(223, 58, 147) 50%,
-    transparent 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .mask-wrapper {
   mask-image: url("/images/big-hero-text.svg");
   mask-repeat: no-repeat;
@@ -268,7 +245,7 @@ main {
   background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
 }
 
-.jon-content {
+.jason-content {
   background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }
 
