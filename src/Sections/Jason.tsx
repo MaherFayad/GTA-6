@@ -5,13 +5,13 @@ import { useGSAP } from '@gsap/react'
 function Jason() {
     useGSAP(() => {
         gsap.set('.jason', {
-            marginTop: '-80vh',
+            marginTop: '-100vh',
         });
 
         gsap.timeline({
             scrollTrigger: {
                 trigger: '.jason',
-                start: 'top 90%',
+                start: 'top 80%',
                 end: '10% center',
                 scrub: 2,
             }
