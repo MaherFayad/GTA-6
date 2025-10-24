@@ -1,33 +1,33 @@
-import React from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 
 const Final = () => {
-    const videoRef = React.useRef<HTMLVideoElement | null>(null);
-        useGSAP(() => {
-        gsap.set('.final-content', {
-            opacity: 0,
-        });
-        // gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: '.final',
-        //         start: 'top top',
-        //         scrub: true,
-        //         pin: true,
-        //         end: '90% top',
-        //     }
-        // });
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.final',
-                start: 'top top',
-                scrub: true,
-                pin: true,
-                end: '90% top',
-            }
-        });
-        tl.to('.final-content', { opacity: 1, duration: 1, ease: 'power1.inOut' });
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useGSAP(() => {
+    gsap.set('.final-content', { opacity: 0 });
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.final',
+        start: 'top top',
+        end: '90% top',
+        scrub: true,
+        pin: true,
+      }
+    })
+
+    const tl = gsap.timeline({ 
+      scrollTrigger: {
+        trigger: '.final',
+        start: 'top 80%',
+        end: '90% top',
+        scrub: true,
+      }
+    })
+
+    tl.to('.final-content', { opacity: 1, duration: 1, scale: 1, ease: 'power1.inOut' });
 
         if (videoRef.current) {
             // use the correct DOM event name 'onloadedmetadata' and guard against null
@@ -40,23 +40,23 @@ const Final = () => {
                     }, "<");
                 }
             };
-        }
-    });
-    return (
-        <section className="final">
-            <div className="final-content size-full">
-                <video
-                    ref={videoRef}
-                    src="/videos/output3.mp4"
-                    className="size-full object-cover"
-                    playsInline
-                    muted
-                    preload='auto'
-                />
-            </div>
-        </section>
+    }
+  });
 
-    )
+  return (
+    <section className="final">
+      <div className="final-content size-full">
+        <video 
+          ref={videoRef}
+          muted
+          playsInline
+          preload="auto"
+          src="/videos/output3.mp4"
+          className="size-full object-cover"
+        />
+      </div>
+    </section>
+  )
 }
 
 export default Final
